@@ -30,7 +30,7 @@ z našich "web hračiek" seriózne aplikácie schopné dynamicky reagovať na po
 trhu.
 
 
-##Časová os
+## Časová os
 
  * Intro (5 min)
    * úvod
@@ -53,7 +53,7 @@ trhu.
  * Otázky (5 min)
 
 
-##Pridaná hodnota pre divákov
+## Pridaná hodnota pre divákov
 
 Po tejto prezentácií by sa mal poslucháč vedieť zorientovať v problematike
 vývoja web aplikácií, ktoré už niesu len hračkou. Budú mať prehľad v nástrojoch
@@ -62,7 +62,7 @@ prezentácie si budú vedieť nájsť implementačné detaily a tak sa posunúť
 do problematiky.
 
 
-##Niečo o mne
+## Niečo o mne
 
 Vyštudoval som aplikovanú informatiku na FMFI UK. Pri písaní svojej diplomovej
 práce som používal Python a bolo to moje prvé stretnutie s vývojom väčšej
