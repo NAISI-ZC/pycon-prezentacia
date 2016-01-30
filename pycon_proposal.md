@@ -1,17 +1,19 @@
-#Full Stack Web Development In Python
+# Full Stack Web Development In Pyhton
 
-Speaker:                Miroslav Beka
-Dĺžka prezentácie:      30min
-Jazyk:                  Slovenský
+Speaker:            Miroslav Beka  
+Dĺžka prezentácie:  30 min  
+Jazyk:              Slovenský
 
-##Cieľová skupina
+## Cieľová skupina
 
 Python web developeri, ktorí nie su úplni začiatočníci. Predpokladá sa, že
 vedia spraviť web aplikáciu, ale potrebovali by viacej informácií o dobrých
 praktikách (best practices) a postupoch. Účelom je ukázať poslucháčom, že Python
 sa dá použiť na vývoj serióznych "enterprise" alebo produktových aplikácií.
 
-##Abstrakt
+
+## Abstrakt
+
 Veľké organizácie tradične používali jazyky ako C++, .NET a Java na vývoj
 enterprise aplikácií. "Skriptovacie" jazyky ako napríklad Python sa považovali
 za riskantné na nasadenie do produkcie. Neboli dostatočne robustné a nástroje
@@ -26,6 +28,7 @@ aplikácie by mali spĺňať niekoľko vlastností. Škálovateľnosť, zero dow
 deployments, krátke release cykly a mnoho ďalších vlastností. Toto všetko robí
 z našich "web hračiek" seriózne aplikácie schopné dynamicky reagovať na potreby
 trhu.
+
 
 ##Časová os
 
