@@ -32,8 +32,32 @@ A to nieje jednoduché vedieť odhadnúť.
 Riešením je dávať si pozor na svoj technologický dlh a zakaždým si nájsť čas
 aby sme ho mohli spraviť alebo vymazať.
 
-TODO: [ Tuto ][2] je veľmi pekná metafora a veľmi pekne vysvetlené, čo to technologický
-dlh je. 
+TODO: [ Tuto ][2] je veľmi pekná metafora a veľmi pekne vysvetlené, čo to
+technologický dlh je. 
+
+čo by mohlo byť riešením na tieto problémy, ktoré máme? na antipatterns
+Je to znalosť nejakých praktík. človek nepotrebuje každú z nich ovládať. Stačí
+aby o nej vedel a aby vedel na čo slúži. Pri najbližšej príležitosti, kedy
+by sa dala takáto technika použiť, tomu dá človek šancu. A tak sa tiež posunie
+nejako ďalej. 
+
+Samozrejme riešením je aj spomínaná disciplína. Musíme platiť svoj dlh, ktorý
+zvykneme robiť.
+
+Continuous improvement. To čo som sa naučil s knižky o scrume. Alebo
+Toyota-Production-System. To je technika, ktorá sa dá uplatniť skoro na všetko.
+A vlastne z tejto metodológie je odvodený aj scrum. Tvorca scrumu sa inšpiroval
+z tohto systému a upravil ho tak, aby sedel na vývoj SW. V skutočnosti je ale
+scrum postavených na takých pravidlách, ktoré sa dajú použiť takmer v akomkoľvek
+prostredí.
+
+Čo som tým chcel povedať, že každý systém má nejaké svoje zákonitosti a nejaké
+pravidlá, ktorými sa riadi. Ľudia ako Ford a Toyota mali tú možnosť, že stáli
+pri zrode industrialneho priemyslu a odpozorovali tieto zákonitosti. Na základe
+svojich skúseností tak postavili svoje metodológie, ktoré fungujú dodnes.
+Treba si však dávať pozor, pretože nieje jednoduché tento sytém uplatniť. Na
+to treba tú spomínanú disciplínu a cit, kedy použiť v akej situácií a v akom
+čase aké pravidlá.
 
 
 ## Hlavný blok (15 min)
