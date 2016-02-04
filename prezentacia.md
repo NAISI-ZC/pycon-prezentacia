@@ -60,34 +60,126 @@ to treba tú spomínanú disciplínu a cit, kedy použiť v akej situácií a v 
 čase aké pravidlá.
 
 
-## Hlavný blok (15 min)
+## Hlavný blok (20 min)
 
- * Hlavný blok (15 min)
-   * vývojové prostredie
-     * nástroje & praktiky
-   * produkčné prostredie
-     * odlišnosti od vývojového prostredia (tu som mal na mysli to, že na
-       produkčnom servery by nemali čo hľadať dev nástroje a knižnice a žiadny
-       iný sw. V podstate len to, čo je potreba na chod aplikácia. Všetko ostatné
-       je zvyšovaním pravdepodobnosti, že sa niečo rozbije)
-       
-     * ako dostať našu appku na produkčný server
-   * continuous integration (CI)
-     * vytváranie balíčkov
-     * spúšťanie testov rôznych úrovní
-     * deploy do test prostredia
-   * continuous deployment (CD)
-     * rozdiely medzi CI a CD
-   * configuration management
+Hlavný blok som sa rozhodol rozdeliť na časti podľa prostredií.
+Rozdelenie teda bude: Development env, CI env, Test env, Production env
 
-# Demo (5 min)
+V nasledujúcich slajdoch si povieme čo sa v každom prostredí zvykne robiť,
+načo to slúži a kedy je vhodné použiť niektoré nástroje.
 
- * Demo (5 min)
-   * video ukážka s komentárom
+### Development environment
 
-# Otázky (5 min)
+Python je dobrý v tom, že zdrojový kód sa dá pustiť na všemožných operačných
+systémoch.
 
- * Otázky (5 min)
+Ja osobne zvyknem pracovať na OS X a Linuxe. Keď som chcel začať nejaké projekt
+proste som si nainštalovať nejaké potrebné balíčky (už neviem aké verzie),
+myslím, že tam boli nejaký python 2.7. Pomocou sudo som nainštalovať všemožný
+bordel medzi systémové balíčky.
+
+Potom som chcel robiť iný projekt v škole. V tomto projekte bolo treba najnovšiu
+verziu Djanga. Ale ja som mal nainštalovanú tú z pred pol roka. Veci zrazu
+prestali fungovať. Viacej času som trávil fixovaním svojho systému. A kým som
+vyriešil jeden problém, rozbil som si ďalších x vecí.
+
+    99 little bugs in the code
+    99 little bugs in the code
+    Take one down, patch it around
+    117 little bugs in the code
+
+Takto prešlo nejaké obdobie a z môjho pracovného kompu sa stal mess. Nič tam
+nefungovalo, stále som musel hladať nejaké riešenia ako to rozbehať. Človek už
+potom nainštaluje čokoľvek len aby sa už konečne dostal k tomu čo potrebuje.
+
+V tomto prípade ide o nekontrolované vývojové prostredie. Takýmto spôsobom,
+človek nemá šancu usledovať ktoré balíky reálne používa. Riešením je izolovať
+vývojové prostredie čo najviac.
+
+TODO: virtualenv a virtualenvwrapper
+
+TODO: vagrant
+
+TODO: set up skript - na začiatok to nemusí byť nič sofistikované.
+najlepšie je si to manuálne prejsť, čo treba spraviť na čistom OS, aby som
+mohol spustiť svoju appku. Spísať si to a potom spraviť nejaký skript, ktorý
+to tam všetko nainštaluje
+
+
+### CI environment
+
+TODO: Review
+Continuous Integration slúži na to aby sme si vyhradili nejaký server (prostredie)
+ktoré je kontrolované oveľa prísnejšie ako Development Env. Na toto prostredie
+väčšinou slúži change management aby sme predišli zmenám, ktoré nám toto prostredie
+rozbijú prípadne privedú nejaké nežiadúce vedlajšie efekty.
+
+Je oveľa jednoduchšie vniesť chybu do programu zlou konfiguráciou ako zlým kódom.
+Navyše konfigurácia ostane dlho bez povšimnutia. K tomuto CI serveru sa tiež
+drží prísna politika, kto naň môže pristupovať. Spravuje ho vzäčša jeden človek.
+Táto metóda je určite dobrá, no prináša závyslosť na 1 človeku, ktorý má kľúče
+od miešačky. Ak sa niečo pokazí, treba na to jeho. Ak treba niečo pridať, treba
+jeho. Jeden človek sa teda stáva bottleneckom pre ostatných.
+
+Lepším prístupom je definovať konfiguráciu CI servera pomocou nejakého skriptu
+aby bol tento server možné jednoducho zreplikovať. Všetky závislosti sú presne
+definované a jasné. Každý priečinok ktorý treba je vytvorený automatickým skriptom,
+každý balík má presnú verziu. Všetci majú prístup k tejto konfigurácií a každý
+si môže spraviť svôj vlastný CI server ak chce. Virtualizácia poskytuje obrovské
+možnosti. Navyše je skript verziovaný, takže nad všetkým máme kontrolu a prehľad.
+
+
+Potom, čo už máme takýto server nahodený, vieme ho využiť na tvorbu balíkov.
+Pre každý commit vieme presne zreplikovať daný balíček, pretože vieme aká je
+konfigurácia CI servera a presne vieme čo sa na balíčkovanie použilo.
+
+
+Tieto balíčky si potom ukladáme do tzv Binary Repository. Čiže niečo ako verziovanie
+zdrojového kódu. Principiálne ide o to isté, ale pozadie funguje inak pretože sa
+jedná o binárne súbory a nie textové.
+
+Prečo ale robíme tieto balíčky?
+TODO: odpovedať na otázku...
+
+### Test environment
+
+TODO: add content
+
+
+### Production environment
+
+odlišnosti od vývojového prostredia (tu som mal na mysli to, že na
+produkčnom servery by nemali čo hľadať dev nástroje a knižnice a žiadny
+iný sw. V podstate len to, čo je potreba na chod aplikácia. Všetko ostatné
+je zvyšovaním pravdepodobnosti, že sa niečo rozbije)
+
+
+### Continuous Delivery
+Aký je rozdieľ medzi continuous integration a continuous delivery??
+
+Ide v princípe o veľmi podobné veci a rozdieľ je len v tom, že otestované a
+pripravené balíčky sa automaticky deploynú na produkčný server.
+Množstvo práce, ktoré sa za týmto malým rozdieľom skrýva je však veľké.
+
+Release candidate by mal prejsť cez sériu akceptačných testov, ktoré skutočne
+zaručia, že aplikácia bude fungovať.
+
+Ak používame viacero serverov a nejaký balancer, treba deployovať postupne po
+serveroch s nejakým rozostupom aby sme nespôsobili down time.
+
+Taktiež treba mať v rukáve monitoring a upozorňovanie ak sa niečo pokazý, aby sme
+deploy mohli včas zastaviť a spraviť rollback na pôvodnú verziu.
+
+Jeden z príkladov ako sa to dá spraviť je ten, že každý produkčný web server
+alebo iné servery, sa pravideľne pozerajú na nejaký metadata súbor, ktorý popisuje
+aktuálnu verziu applikácie poslednej verzie vhodnej pre release. Tieto servery
+si tak prevezmú svoju verziu asynchrónne čo umožňuje mnoho iných praktík.
+
+Zero down time releases and roll backs
+
+
+
+## Otázky (5 min)
 
 
 

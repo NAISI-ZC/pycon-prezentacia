@@ -4,6 +4,7 @@ Speaker:            Miroslav Beka
 Dĺžka prezentácie:  30 min  
 Jazyk:              Slovenský
 
+
 ## Cieľová skupina
 
 Python web developeri, ktorí nie su úplni začiatočníci. Predpokladá sa, že
@@ -75,3 +76,4 @@ som zmenil zamestnanie do firmy Kistler, kde momentálne pracujem na podobných
 automatizačných veciach.
 
 Python je môj hlavný programovací jazyk a stále sa v ňom snažím zdokonalovať.
+

@@ -1,38 +1,56 @@
 # Meetup demo
-Just some notes about meetup demo that I'll be doing in few weeks.
 
-## Used hardware
-I'll be using my own virtual lab. I'm using vmware esxi host on HP Proliant
-microserver gen 8
+Niekoľko poznámok ohľadom ukážky na pycon meetupe
 
-To reduce any network interuptions, I should bring my own server in place. But
-then I would need some network switch with dhcp server to assign IP addresses.
 
-After all, maybe it's better to let the server be in my place and connect
-remotely.
+## Použitý hardware
 
-## Content of demo
+Použiť by som chcel svoj virtualizačný lab. Lepšie bude, ak ho ponechám doma a
+radšej si spristupnim DMZ
 
-_note: infrastructure should be already created. I should have installed jenkins
-or other CI server, prepared ssh keys, assigned keys in gitlab and so on_
 
-* project is ready to start
-* set up development machine
-  * install vagrant
-  * configure vagrant
-  * use bootstrap
-  * port forwading
-  * running the application on vagrant
+## Obsah ukážky
 
-* set up gitlab CI to use runner to package application into python package
-* set up gitlab CI to run coverage tests?
-* set up gitlab CI to run unit tests?
-* Trigger jenkins job
-  * download package
-  * deploy package on test server
-* execute system tests
-* execute some other tests
-* create documentation
-* create test report?
-* if everything passes deploy on production server
+Išlo by o jednoduchú applikáciu na poznámky. Táto web applikácia by bola dobrá
+ukážka ako sa robí taká aplikácia, aké nátroje môžem použiť, ktoré by
+v budúcnosti uľahšia niektoré kroky.
+
+
+Applikácia sa volá - NoteB00k
+
+backend je spravený vo Flasku. Backend sprístupňuje REST API, pomocou ktorého
+klient pristupuje k dátam.
+
+Klient bude napísaný v javascripte, CSS, HTML a už bude hotový, tak isto ako
+backend.
+
+Backend sa bude testovať pomocou RAML. RAML slúži na definíciu API. Pomocou
+tohto jazyka vieme designovať a zároveň testovať naše API. Zároveň vieme
+jednoducho spraviť mocking server.
+
+Všetky tieto súbory si verziujeme v gite.
+
+Potrebovali by sme vytvoriť izolovanejšie prostredie na svojej mašine.Môžeme
+použiť virtualenv na správu svojich potrebných python balíčkov. Mne osobne sa
+už veľa krát stalo, že na dev používam mac os x ale služba beží na linux.
+Dokonca niekedy potrebujem pracovať aj na windows os. Po čase začne byť
+nastavovanie python po rôznych os únavné. A navyše nie všetko funguje rovnako
+pod každým OS. Preto radšej používam Vagrant. Takýmto spôsobom sa dokážem
+najviac priblížiť produkčnému prostrediu a zároveň mať zhotovené funkčné dev
+prostredie behom prá minúť. Stačí virtualizácia cez virtualbox a som vybavený.
+
+Ďalšou výhodou ako som už spomenul je niele to, že pracujem na podobnom prostredí
+ako je produkčné, môžem si dokonca skúšať priamo konfigurácie web serverov
+s mojou aplikáciou a podobne.
+
+__note: dev prostredie je nastavené__
+Takže momentálne mám nastavené svoje DEV prostredie.
+
+Potreboval by som nájsť spôsob ako balíčkovať svoju aplikáciu aby som mohol
+tento balíček jednoducho deployovať do test prostredia a samozrejme do produkčného
+prostredia.
+
+Použijem na to CI server.
+__note: stretávame s CI__
+
 
