@@ -1,7 +1,12 @@
 # Pycon.sk
-obsah a poznamky k prezentácií na Pycon.sk
+Poznámky k prezentáciam pre Pycon.sk konferenciu.
 
-* [proposal](http://gitlab.sjudeu.sk/sjudeu/pycon-prezentacia/blob/master/pycon_proposal.md)
-* [meetup](http://gitlab.sjudeu.sk/sjudeu/pycon-prezentacia/blob/master/meetup.md)
-* [prezentacia](http://gitlab.sjudeu.sk/sjudeu/pycon-prezentacia/blob/master/prezentacia.md)
-* [zdroje](http://gitlab.sjudeu.sk/sjudeu/pycon-prezentacia/blob/master/zdroje.md)
+
+## Pycon 2017
+* [proposal](2017/pycon_proposal.md)
+
+## Pycon 2016
+* [proposal](2016/pycon_proposal.md)
+* [meetup](2016/meetup.md)
+* [prezentacia](2016/prezentacia.md)
+* [zdroje](2016/zdroje.md)
