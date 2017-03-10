@@ -1,5 +1,4 @@
 import inspect
-from robot.api import logger
 
 def keyword(func):
     func.robot = True

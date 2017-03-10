@@ -1,5 +1,3 @@
-from robot.api import logger
-
 class Espresso:
     ROBOT_LIBRARY_SCOPE = 'TEST_CASE'
     # ROBOT_LIBRARY_SCOPE = 'TEST_SUITE'

@@ -1,4 +1,3 @@
-
 class CoffeeBeans(object):
 
     ROBOT_LIBRARY_SCOPE = 'TEST_CASE'
