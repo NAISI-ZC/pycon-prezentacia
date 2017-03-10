@@ -1,7 +1,7 @@
 # Custom Libraries for Robot Framework
 
-Speaker:            Miroslav Beka  
-Dĺžka prezentácie:  30 min  
+Speaker:            Miroslav Beka
+Dĺžka prezentácie:  30 min
 Jazyk:              Slovenský
 
 
