@@ -1,6 +1,6 @@
 *** Settings ***
-# Library    coffee_library
-Library    coffee_library.py
+Library    coffee_library
+# Library    coffee_library.py
 
 *** Test Cases ***
 Check Coffee Machine

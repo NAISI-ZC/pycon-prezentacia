@@ -1,6 +1,3 @@
-'''
-Very basic library
-'''
 import random
 
 def get_coffee_machine_status():
